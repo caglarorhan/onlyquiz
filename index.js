@@ -103,7 +103,7 @@ const OQ={
             this.targetQuizPanel.innerHTML = `
             <div id='question'>
                 <h2>Quiz Completed</h2>
-                <img src='../assets/quiz-complete.png' alt='Quiz Completed' />
+                <img src='./assets/quiz-complete.png' alt='Quiz Completed' />
                 <h3>You have answered ${correctAnswerCount} out of ${this.questions.length} questions correctly.</h3>
             </div>
         `;}

@@ -1,5 +1,6 @@
 # Only Quiz
 You can just try it from here: [Only Quiz](https://caglarorhan.github.io/onlyquiz/)
+
 Main purpose of the project is to trying to show how beautiful a quiz can be with only vanilla JS.
 ## Description
 Only Quiz is a simple quiz application built using vanilla JavaScript. The application presents a series of questions to the user, tracks their answers, and displays a score at the end.

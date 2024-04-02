@@ -75,7 +75,11 @@ const OQ={
     answerAcceptingProgress(event,answer){
         const srcButton = event.target;
         srcButton.classList.add('answered');
-        //this.targetQuizPanel.querySelector('ul li button').forEach(btn=>btn.disabled=true);
+        this.targetQuizPanel.querySelectorAll('ul>li>button').forEach(btn=>{
+            if(btn.textContent!==answer){
+                btn.disabled=true;
+            }
+        });
         setTimeout(()=>{
             if(answer===this.questions[this.userAnswers.length].answers[0]){
                 srcButton.classList.remove('answered');
@@ -84,10 +88,11 @@ const OQ={
                 srcButton.classList.remove('answered');
                 srcButton.classList.add('wrong');
             }
+            let nextTimer = this.targetQuizPanel.querySelector('progress').value>2000?2000:this.targetQuizPanel.querySelector('progress').value;
             setTimeout(()=>{
                 this.userAnswers.push(answer);
                 this.moveToTheNextQuestion();
-            },2000)
+            },nextTimer)
         },1000)
 
     },
